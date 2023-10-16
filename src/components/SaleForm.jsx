@@ -29,7 +29,8 @@ export const SaleForm = () => {
 
   return (
     <div>
-      <div className="flex gap-2 flex-wrap">
+      <h2>Add a new Sale: </h2>
+      <div className="flex gap-2 flex-wrap mt-2">
         <label className="flex flex-col">
           Item:
           <select

@@ -35,7 +35,8 @@ export const ItemForm = () => {
 
   return (
     <div>
-      <div className="flex gap-2 flex-wrap">
+      <h2>Add a new Item:</h2>
+      <div className="flex gap-2 flex-wrap mt-2">
         <label className="flex flex-col">
           Name:
           <input

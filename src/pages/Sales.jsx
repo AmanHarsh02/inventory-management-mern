@@ -8,7 +8,7 @@ export const Sales = () => {
     <div className="p-4 flex flex-col gap-4">
       <SaleForm />
 
-      <h2>All Items:</h2>
+      <h2>All Sales:</h2>
 
       <div className="w-[100%] overflow-x-scroll">
         <table className="w-[100%]">
