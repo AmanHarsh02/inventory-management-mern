@@ -27,7 +27,9 @@ export const Sales = () => {
                 key={sale._id}
                 className="border-2 border-gray-300 text-center"
               >
-                <td className="p-4">{sale.item.name}</td>
+                <td className="p-4">
+                  {sale?.item ? sale?.item?.name : "Out of Stock Item"}
+                </td>
                 <td className="p-4">{sale.description}</td>
                 <td className="p-4">{sale.quantity}</td>
                 <td className="p-4">${sale.price}</td>

@@ -17,11 +17,11 @@ export const CustomChart = ({ reportType }) => {
     );
 
     data = {
-      labels: items.map((item) => item.name),
+      labels: items.map((item) => item?.name),
       datasets: [
         {
           label: "Amount",
-          data: items.map((item) => item.quantity * item.price),
+          data: items.map((item) => item?.quantity * item?.price),
           backgroundColor: chartColors,
           borderColor: "#000000",
           borderWidth: 1,
@@ -36,11 +36,13 @@ export const CustomChart = ({ reportType }) => {
     );
 
     data = {
-      labels: sales.map((sale) => sale.item.name),
+      labels: sales.map((sale) =>
+        sale?.item ? sale?.item?.name : "Out of Stock Item"
+      ),
       datasets: [
         {
           label: "Amount",
-          data: sales.map((sale) => sale.quantity * sale.price),
+          data: sales.map((sale) => sale?.quantity * sale?.price),
           backgroundColor: chartColors,
           borderColor: "#000000",
           borderWidth: 1,
